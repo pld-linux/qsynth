@@ -2,7 +2,7 @@ Summary:	Qt front-end to fluidsynth
 Summary(pl):	Oparta o Qt nak³adka na fluidsynth
 Name:		qsynth
 Version:	0.2.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/qsynth/%{name}-%{version}.tar.gz
@@ -13,6 +13,8 @@ URL:		http://qsynth.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	fluidsynth-devel >= 1.0.0
 BuildRequires:	qt-devel >= 3.1.1
+# because of EA in fluidsynth
+ExclusiveArch:	%{ix86} amd64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,6 +26,9 @@ QSynth jest nak³adk± graficzn± na fluidsynth.
 %prep
 %setup -q
 %patch -p1
+
+sed -i -e 's:QTDIR/lib:QTDIR/%{_lib}:g' -e 's:X11R6/lib:X11R6/%{_lib}:g' \
+	configure.in
 
 %build
 QTDIR=%{_prefix}
