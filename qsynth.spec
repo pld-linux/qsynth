@@ -23,14 +23,12 @@ QSynth jest nak³adk± graficzn± na fluidsynth.
 %prep
 %setup -q
 %patch -p1
-perl -pi -e "s,QTDIR/include,QTDIR/include/qt,g" configure.in
 
 %build
 QTDIR=%{_prefix}
 CFLAGS="$CFLAGS -I%{_includedir}/qt"
 CPPFLAGS="$CPPFLAGS -I%{_includedir}/qt"
 export CFLAGS CPPFLAGS QTDIR
-
 %configure
 %{__make}
 
