@@ -2,7 +2,7 @@ Summary:	Qt front-end to fluidsynth
 Summary(pl):	Oparta o Qt nak³adka na fluidsynth
 Name:		qsynth
 Version:	0.2.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/qsynth/%{name}-%{version}.tar.gz
