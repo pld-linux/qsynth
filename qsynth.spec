@@ -1,15 +1,16 @@
 Summary:	Qt front-end to fluidsynth
 Summary(pl):	Oparta o Qt nak³adka na fluidsynth
 Name:		qsynth
-Version:	0.0.1
+Version:	0.0.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/qsynth/%{name}-%{version}.tar.gz
-# Source0-md5:	b13e8810652a4dfac8888d7669ddef5d
+# Source0-md5:	b7722308c6c3c1d30339ee49fe9a4696
 Source1:	%{name}.desktop
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://qsynth.sf.net/
+BuildRequires:	autoconf
 BuildRequires:	fluidsynth-devel >= 1.0.0
 BuildRequires:	qt-devel >= 3.1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,6 +30,7 @@ QTDIR=%{_prefix}
 CFLAGS="$CFLAGS -I%{_includedir}/qt"
 CPPFLAGS="$CPPFLAGS -I%{_includedir}/qt"
 export CFLAGS CPPFLAGS QTDIR
+%{__autoconf}
 %configure
 %{__make}
 
