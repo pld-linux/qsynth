@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	fluidsynth-devel >= 1.0.0
 BuildRequires:	qt-devel >= 3.1.1
 # because of EA in fluidsynth
-ExclusiveArch:	%{ix86} amd64
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
