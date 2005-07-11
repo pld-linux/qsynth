@@ -9,11 +9,12 @@ Source0:	http://dl.sourceforge.net/qsynth/%{name}-%{version}.tar.gz
 # Source0-md5:	21672dcb836df0a7ee8a8cfa093ba491
 Source1:	%{name}.desktop
 Patch0:		%{name}-DESTDIR.patch
-URL:		http://qsynth.sf.net/
+URL:		http://qsynth.sourceforge.net/qsynth-index.html
 BuildRequires:	autoconf
 BuildRequires:	fluidsynth-devel >= 1.0.0
 BuildRequires:	qmake
 BuildRequires:	qt-devel >= 3.1.1
+BuildRequires:	sed >= 4.0
 # because of EA in fluidsynth
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
