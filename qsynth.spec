@@ -1,14 +1,13 @@
 Summary:	Qt front-end to fluidsynth
 Summary(pl):	Oparta o Qt nak³adka na fluidsynth
 Name:		qsynth
-Version:	0.2.3
+Version:	0.2.5
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/qsynth/%{name}-%{version}.tar.gz
-# Source0-md5:	15de7dbb679811b10759c0b0bffa70b3
+# Source0-md5:	24a1ce00876a79a409fa28d0e8b3221f
 Source1:	%{name}.desktop
-Patch0:		%{name}-DESTDIR.patch
 URL:		http://qsynth.sourceforge.net/qsynth-index.html
 BuildRequires:	autoconf
 BuildRequires:	fluidsynth-devel >= 1.0.0
@@ -27,10 +26,6 @@ QSynth jest nak³adk± graficzn± na fluidsynth.
 
 %prep
 %setup -q
-%patch -p1
-
-sed -i -e 's:QTDIR/lib:QTDIR/%{_lib}:g' -e 's:X11R6/lib:X11R6/%{_lib}:g' \
-	configure.in
 
 %build
 QTDIR=%{_prefix}
@@ -49,6 +44,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir}}
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install icons/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
