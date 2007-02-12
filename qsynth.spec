@@ -1,5 +1,5 @@
 Summary:	Qt front-end to fluidsynth
-Summary(pl):	Oparta o Qt nak³adka na fluidsynth
+Summary(pl.UTF-8):   Oparta o Qt nakÅ‚adka na fluidsynth
 Name:		qsynth
 Version:	0.2.5
 Release:	1
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 QSynth is a fluidsynth GUI front-end application.
 
-%description -l pl
-QSynth jest nak³adk± graficzn± na fluidsynth.
+%description -l pl.UTF-8
+QSynth jest nakÅ‚adkÄ… graficznÄ… na fluidsynth.
 
 %prep
 %setup -q
