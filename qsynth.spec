@@ -1,5 +1,5 @@
 Summary:	Qt front-end to fluidsynth
-Summary(pl.UTF-8):   Oparta o Qt nakładka na fluidsynth
+Summary(pl.UTF-8):	Oparta o Qt nakładka na fluidsynth
 Name:		qsynth
 Version:	0.2.5
 Release:	1
