@@ -12,7 +12,7 @@ URL:		http://qsynth.sourceforge.net/qsynth-index.html
 BuildRequires:	autoconf
 BuildRequires:	fluidsynth-devel >= 1.0.0
 BuildRequires:	qmake
-BuildRequires:	qt-devel >= 3.1.1
+BuildRequires:	qt-devel >= 6:3.1.1
 BuildRequires:	sed >= 4.0
 # because of EA in fluidsynth
 ExclusiveArch:	%{ix86} %{x8664}
