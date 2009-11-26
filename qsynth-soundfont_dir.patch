@@ -1,0 +1,12 @@
+diff -dur qsynth-0.2.6.orig/src/qsynthOptions.cpp qsynth-0.2.6/src/qsynthOptions.cpp
+--- qsynth-0.2.6.orig/src/qsynthOptions.cpp	2006-11-07 10:01:19.000000000 +0100
++++ qsynth-0.2.6/src/qsynthOptions.cpp	2009-11-26 18:03:08.000000000 +0100
+@@ -53,7 +53,7 @@
+ 
+     // Load defaults...
+     m_settings.beginGroup("/Defaults");
+-    sSoundFontDir  = m_settings.readEntry("/SoundFontDir", QString::null);
++    sSoundFontDir  = m_settings.readEntry("/SoundFontDir", QString("/usr/share/soundfonts"));
+     bPresetPreview = m_settings.readBoolEntry("/PresetPreview", false);
+     m_settings.endGroup();
+ 
