@@ -1,12 +1,12 @@
-diff -dur qsynth-0.2.6.orig/src/qsynthOptions.cpp qsynth-0.2.6/src/qsynthOptions.cpp
---- qsynth-0.2.6.orig/src/qsynthOptions.cpp	2006-11-07 10:01:19.000000000 +0100
-+++ qsynth-0.2.6/src/qsynthOptions.cpp	2009-11-26 18:03:08.000000000 +0100
-@@ -53,7 +53,7 @@
+diff -dur qsynth-0.4.0.orig/src/qsynthOptions.cpp qsynth-0.4.0/src/qsynthOptions.cpp
+--- qsynth-0.4.0.orig/src/qsynthOptions.cpp	2015-09-07 16:59:23.000000000 +0200
++++ qsynth-0.4.0/src/qsynthOptions.cpp	2015-12-11 18:01:50.031289071 +0100
+@@ -80,7 +80,7 @@
  
-     // Load defaults...
-     m_settings.beginGroup("/Defaults");
--    sSoundFontDir  = m_settings.readEntry("/SoundFontDir", QString::null);
-+    sSoundFontDir  = m_settings.readEntry("/SoundFontDir", QString("/usr/share/soundfonts"));
-     bPresetPreview = m_settings.readBoolEntry("/PresetPreview", false);
-     m_settings.endGroup();
+ 	// Load defaults...
+ 	m_settings.beginGroup("/Defaults");
+-	sSoundFontDir  = m_settings.value("/SoundFontDir").toString();
++	sSoundFontDir  = m_settings.value("/SoundFontDir", QString("/usr/share/soundfonts")).toString();
+ 	bPresetPreview = m_settings.value("/PresetPreview", false).toBool();
+ 	m_settings.endGroup();
  
