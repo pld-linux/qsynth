@@ -1,0 +1,11 @@
+--- qsynth-0.5.3/src/CMakeLists.txt~	2018-10-10 16:35:48.000000000 +0200
++++ qsynth-0.5.3/src/CMakeLists.txt	2018-11-19 09:57:29.000000000 +0100
+@@ -140,7 +140,7 @@
+      RUNTIME DESTINATION bin )
+   install ( FILES ${QM_FILES}
+      DESTINATION share/qsynth/translations )
+-  install ( FILES ${CMAKE_CURRENT_BINARY_DIR}/qsynth.desktop
++  install ( FILES qsynth.desktop
+      DESTINATION share/applications )
+   install ( FILES images/qsynth.png
+      DESTINATION share/pixmaps )
