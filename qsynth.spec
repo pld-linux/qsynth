@@ -2,7 +2,7 @@ Summary:	Qt front-end to fluidsynth
 Summary(pl.UTF-8):	Oparta o Qt nakładka na fluidsynth
 Name:		qsynth
 Version:	0.5.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://downloads.sourceforge.net/qsynth/%{name}-%{version}.tar.gz
@@ -16,10 +16,9 @@ BuildRequires:	Qt5Widgets-devel >= 5.1.0
 BuildRequires:	Qt5X11Extras-devel >= 5.1.0
 BuildRequires:	cmake >= 2.6
 BuildRequires:	fluidsynth-devel >= 2.0.0
+BuildRequires:	qt5-linguist
 BuildRequires:	qt5-qmake
 BuildRequires:	sed >= 4.0
-# because of EA in fluidsynth
-ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
